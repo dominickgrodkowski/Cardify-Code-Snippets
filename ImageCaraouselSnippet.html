@@ -1,0 +1,43 @@
+<style>.swiper-slide-image{cursor: pointer;} </style>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+
+/* Edit the URL Links Here */
+
+let links = [
+
+    'https://cardify-store.de/product/digimon-bt-06-display-double-diamond/',
+
+    'https://cardify-store.de/product-category/one-piece-card-game/booster-displays-one-piece-card-game/',
+
+    'https://cardify-store.de/product/yu-gi-oh-ancient-guardians-display/',
+
+];
+
+
+
+document.body.addEventListener('click', function (e) {
+
+    if (e.target.closest('.carousel-links .swiper-slide')){
+
+    let i = e.target.closest('.swiper-slide').getAttribute("data-swiper-slide-index");
+
+    if (links[i] && links[i].length > 2){
+
+    window.open(links[i]);
+
+    }
+
+    }
+
+});
+
+});
+
+</script>

@@ -42,3 +42,50 @@ document.body.addEventListener('click', function (e) {
 });
 
 </script>
+
+// Second Carousel
+<style>.swiper-slide-image{cursor: pointer;} </style>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+
+/* Edit the URL Links Here */
+
+let links = [
+
+    'https://cardify-store.de/product-category/one-piece-card-game/',
+
+    'https://cardify-store.de/product-category/digimon-card-game/',
+
+    'https://cardify-store.de/product-category/yu-gi-oh/',
+    
+    'https://cardify-store.de/product-category/magic-the-gathering/',
+
+];
+
+
+
+document.body.addEventListener('click', function (e) {
+
+    if (e.target.closest('.carousel-links2 .swiper-slide')){
+
+    let i = e.target.closest('.swiper-slide').getAttribute("data-swiper-slide-index");
+
+    if (links[i] && links[i].length > 2){
+
+    location = links[i];
+
+    }
+
+    }
+
+});
+
+});
+
+</script>
